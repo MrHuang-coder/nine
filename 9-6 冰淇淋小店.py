@@ -1,4 +1,4 @@
-class Restaurant:
+class Restaurant():
     def __init__(self, restaurant_name, cuisine_type):
         self.restauant_name = restaurant_name
         self.cusine_type = cuisine_type
@@ -12,10 +12,10 @@ class Restaurant:
         self.number_serverd = people
     def increment_number_served(self, number_people):
         self.number_serverd += number_people
-
-restaurant = Restaurant('hanhan', 'America')
-print(restaurant.number_serverd)
-restaurant.set_name_served(20)
-print(restaurant.number_serverd)
-restaurant.increment_number_served(10)
-print(restaurant.number_serverd)
+        
+class IceCreamStand(Restaurant):
+    flavors = ['chocolate']
+    def show_falvor(self):
+        print(self.flavors)
+IceCreamStand = IceCreamStand('hanhan', 'America')
+print(IceCreamStand.flavors)
